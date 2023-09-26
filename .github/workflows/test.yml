@@ -1,0 +1,11 @@
+name: Teste Pick Up Runner
+
+on:
+  workflow_dispatch:
+
+jobs:
+  pick:
+    runs-on: ferdletasks
+    steps:
+    - name: pick job
+      run: echo "Job picked up"
