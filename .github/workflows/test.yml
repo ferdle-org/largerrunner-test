@@ -4,19 +4,16 @@ on:
   workflow_dispatch:
 
 jobs:
-  setup:
-  
-    runs-on: ferdletasks
-
-    steps:
-    - uses: actions/checkout@v4
-    - name: Set up Python 3.10
-      uses: actions/setup-python@v4
-      with:
-        python-version: "3.10"
   pick:
     runs-on: ferdletasks
     steps:
-    - name: Checkout
     - name: pick job
       run: echo "Job picked up"
+  setup:  
+    runs-on: ferdletasks
+    steps:
+    - uses: actions/checkout@v3
+    - name: Set up Python 3.10
+      uses: actions/setup-python@v3
+      with:
+        python-version: "3.10"
