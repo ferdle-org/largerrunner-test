@@ -7,5 +7,7 @@ jobs:
   pick:
     runs-on: ferdletasks
     steps:
+    - name: Checkout
+    - uses: actions/checkout@v4
     - name: pick job
       run: echo "Job picked up"
